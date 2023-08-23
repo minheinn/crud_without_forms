@@ -1,0 +1,13 @@
+{% extends 'layout/master.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <form method="post">
+        {% csrf_token %}
+        <h3> Are You Sure! You want to DELETE?</h3>
+        <a href="{% url 'index' %}" class="btn btn-info btn-sm">Cancel</a>
+        <input type="submit" class='btn btn-danger btn-sm' value="Delete">
+    </form>
+</div>
+
+{% endblock content %}
